@@ -90,7 +90,7 @@
     "aws-cdk-lib": "2.200.1",
     "cdk": "2.1018.0",
     "chalk": "5.4.1",
-    "tsx": "4.20.0"
+    "tsx": "4.20.1"
   },
   "devDependencies": {
     "@bifravst/eslint-config-typescript": "6.3.0",
