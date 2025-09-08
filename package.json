@@ -89,7 +89,7 @@
     "@bifravst/run": "1.2.0",
     "aws-cdk-lib": "2.214.0",
     "cdk": "2.1029.0",
-    "chalk": "5.6.0",
+    "chalk": "5.6.2",
     "tsx": "4.20.5"
   },
   "devDependencies": {
