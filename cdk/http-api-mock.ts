@@ -103,7 +103,7 @@ const cx = await cdk.fromAssemblyBuilder(async () => app.synth())
 
 if (options.destroy === true) {
 	await cdk.destroy(cx)
-	await saveConfig()
 } else {
 	await cdk.deploy(cx)
+	await saveConfig()
 }
