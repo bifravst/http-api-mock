@@ -62,9 +62,7 @@ jobs:
       - name: Destroy
         env:
           NODE_ARGS: "--no-warnings --experimental-transform-types"
-        run:
-          HTTP_API_MOCK_STACK_NAME=${{ steps.deploy.outputs.stack-name || '' }}
-          node ./cdk/http-api-mock.ts --destroy
+        run: node ./cdk/http-api-mock.ts --destroy
 
       - name: Semantic release
         run: npx semantic-release
