@@ -45,7 +45,6 @@ export class HttpApiMock extends Resource {
 				name: 'timestamp',
 				type: DynamoDB.AttributeType.STRING,
 			},
-			pointInTimeRecovery: true,
 			removalPolicy: RemovalPolicy.DESTROY,
 		})
 		this.requestsTable.addGlobalSecondaryIndex({
@@ -68,7 +67,6 @@ export class HttpApiMock extends Resource {
 				name: 'timestamp',
 				type: DynamoDB.AttributeType.STRING,
 			},
-			pointInTimeRecovery: true,
 			removalPolicy: RemovalPolicy.DESTROY,
 			timeToLiveAttribute: 'ttl',
 		})

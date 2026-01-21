@@ -52,7 +52,7 @@ jobs:
       - name: Deploy
         env:
           NODE_ARGS: "--no-warnings --experimental-transform-types"
-        run: node ./cli.ts > http-api-mock.json
+        run: node ./cdk/http-api-mock.ts > http-api-mock.json
 
       - name: End-to-end tests
         env:
@@ -62,7 +62,9 @@ jobs:
       - name: Destroy
         env:
           NODE_ARGS: "--no-warnings --experimental-transform-types"
-        run: node ./cli.ts destroy `jq -r '.stackName' http-api-mock.json`
+        run:
+          node ./cdk/http-api-mock.ts destroy `jq -r '.stackName'
+          http-api-mock.json`
 
       - name: Semantic release
         run: npx semantic-release

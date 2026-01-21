@@ -16,9 +16,6 @@
     "prepublishOnly": "node --experimental-strip-types ./.npm/compile.ts && npx tsgo src/*.ts --emitDeclarationOnly --declaration --ignoreConfig --allowImportingTsExtensions --target esnext --module nodenext --moduleResolution nodenext --outDir ./npm && mv npm/src/* npm",
     "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
-  "bin": {
-    "http-api-mock": "cli.ts"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bifravst/http-api-mock.git"
@@ -69,11 +66,7 @@
     "access": "public"
   },
   "files": [
-    "dist/cdk",
-    "dist/src",
-    "cdk",
-    "src",
-    "cli.ts",
+    "npm",
     "LICENSE",
     "README.md"
   ],
@@ -93,12 +86,15 @@
     "tsx": "4.21.0"
   },
   "devDependencies": {
+    "@aws-cdk/toolkit-lib": "1.13.0",
     "@bifravst/eslint-config-typescript": "6.4.4",
     "@bifravst/prettier-config": "1.1.17",
     "@commitlint/config-conventional": "20.3.1",
     "@types/aws-lambda": "8.10.160",
+    "@types/command-line-args": "5.2.3",
     "@types/node": "25.0.9",
     "@typescript/native-preview": "7.0.0-dev.20260120.1",
+    "command-line-args": "6.0.1",
     "commitlint": "20.3.1",
     "husky": "9.1.7"
   }

@@ -19,12 +19,6 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true
   },
-  "include": [
-    "./src/**/*",
-    "./cdk/**/*",
-    "./e2e.spec.ts",
-    "./.npm/*.ts",
-    "./cli.ts"
-  ],
+  "include": ["./src/**/*", "./cdk/**/*", "./e2e.spec.ts", "./.npm/*.ts"],
   "exclude": ["./npm/**/*"]
 }
