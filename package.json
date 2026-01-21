@@ -17,7 +17,7 @@
     "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
   "bin": {
-    "http-api-mock": "cli.js"
+    "http-api-mock": "cli.ts"
   },
   "repository": {
     "type": "git",
@@ -73,7 +73,7 @@
     "dist/src",
     "cdk",
     "src",
-    "cli.js",
+    "cli.ts",
     "LICENSE",
     "README.md"
   ],

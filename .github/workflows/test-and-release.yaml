@@ -50,13 +50,17 @@ jobs:
           aws-region: ${{ vars.AWS_REGION_CI }}
 
       - name: Deploy
-        run: ./cli.js > http-api-mock.json
+        env:
+          NODE_ARGS: "--no-warnings --experimental-transform-types"
+        run: node ./cli.ts > http-api-mock.json
 
       - name: End-to-end tests
         run: npx tsx --test e2e.spec.ts
 
       - name: Destroy
-        run: ./cli.js destroy `jq -r '.stackName' http-api-mock.json`
+        env:
+          NODE_ARGS: "--no-warnings --experimental-transform-types"
+        run: node ./cli.ts destroy `jq -r '.stackName' http-api-mock.json`
 
       - name: Semantic release
         run: npx semantic-release
