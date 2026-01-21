@@ -1,13 +1,13 @@
 import { Toolkit } from '@aws-cdk/toolkit-lib'
 import { packLambdaFromPath } from '@bifravst/aws-cdk-lambda-helpers'
 import { packLayer } from '@bifravst/aws-cdk-lambda-helpers/layer'
-import { fromEnv } from '@bifravst/from-env'
 import commandLineArgs from 'command-line-args'
 import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import pJSON from '../package.json' with { type: 'json' }
+import { randomString } from '../src/randomString.ts'
 import { HTTPAPIMockApp } from './App.ts'
 
 const options = commandLineArgs([
@@ -18,9 +18,8 @@ const options = commandLineArgs([
 	},
 ])
 
-const { stackName } = fromEnv({ stackName: 'HTTP_API_MOCK_STACK_NAME' })(
-	process.env,
-)
+const stackName =
+	process.env.HTTP_API_MOCK_STACK_NAME ?? `http-api-mock-${randomString()}`
 
 const baseDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distDir = await fs.mkdtemp(path.join(os.tmpdir(), 'temp-'))
