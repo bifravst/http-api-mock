@@ -6,7 +6,7 @@ import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import pJSON from '../package.json' with { type: 'json' }
-import { HTTPAPIMockApp } from './App.js'
+import { HTTPAPIMockApp } from './App.ts'
 
 const { stackName } = fromEnv({ stackName: 'HTTP_API_MOCK_STACK_NAME' })(
 	process.env,

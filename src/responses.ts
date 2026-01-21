@@ -1,7 +1,7 @@
 import { PutItemCommand, type DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { marshall } from '@aws-sdk/util-dynamodb'
 import { randomUUID } from 'node:crypto'
-import { sortQuery } from './sortQueryString.js'
+import { sortQuery } from './sortQueryString.ts'
 
 export type Response = {
 	// e.g. 'GET'

@@ -5,8 +5,8 @@ import run from '@bifravst/run'
 import chalk from 'chalk'
 import path, { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import type { StackOutputs } from '../cdk/Stack.js'
-import { randomString } from './randomString.js'
+import type { StackOutputs } from '../cdk/Stack.ts'
+import { randomString } from './randomString.ts'
 
 const die = (err: Error): void => {
 	console.error('')

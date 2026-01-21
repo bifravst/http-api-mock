@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import { parseMockRequest } from './parseMockRequest.js'
+import { parseMockRequest } from './parseMockRequest.ts'
 
 void describe('parseMockRequest()', () => {
 	void it('should parse method, resource, protocol, headers and body', () =>

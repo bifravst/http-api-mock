@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import { parseMockResponse } from './parseMockResponse.js'
+import { parseMockResponse } from './parseMockResponse.ts'
 
 void describe('parseMockResponse()', () => {
 	void it('should parse protocol, statusCode, headers and body', () =>

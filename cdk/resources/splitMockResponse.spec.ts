@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import { splitMockResponse } from './splitMockResponse.js'
+import { splitMockResponse } from './splitMockResponse.ts'
 void describe('split mock response', () => {
 	void it('should parse headers and body', () =>
 		assert.deepEqual(

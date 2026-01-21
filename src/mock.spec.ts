@@ -2,7 +2,7 @@ import type { AttributeValue, DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { unmarshall } from '@aws-sdk/util-dynamodb'
 import assert from 'node:assert/strict'
 import { describe, it, mock as testMock } from 'node:test'
-import { mock } from './mock.js'
+import { mock } from './mock.ts'
 
 void describe('mock()', () => {
 	void it('should register a response', async () => {

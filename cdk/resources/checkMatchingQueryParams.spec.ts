@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import { checkMatchingQueryParams } from './checkMatchingQueryParams.js'
+import { checkMatchingQueryParams } from './checkMatchingQueryParams.ts'
 
 void describe('checkMatchingQueryParams', () => {
 	void it('should return true when expected is subset of actual parameters', () => {

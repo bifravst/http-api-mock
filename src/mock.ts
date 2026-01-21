@@ -1,5 +1,5 @@
 import type { DynamoDBClient } from '@aws-sdk/client-dynamodb'
-import { registerResponse } from './responses.js'
+import { registerResponse } from './responses.ts'
 
 type MockResponseFn = (
 	// The expected request in the form 'GET resource/subresource?query=value

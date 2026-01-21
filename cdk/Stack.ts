@@ -3,7 +3,7 @@ import { LambdaSource } from '@bifravst/aws-cdk-lambda-helpers/cdk'
 import type { PackedLayer } from '@bifravst/aws-cdk-lambda-helpers/layer'
 import type { App } from 'aws-cdk-lib'
 import { CfnOutput, aws_lambda as Lambda, Stack } from 'aws-cdk-lib'
-import { HttpApiMock } from './resources/HttpApiMock.js'
+import { HttpApiMock } from './resources/HttpApiMock.ts'
 
 /**
  * This is CloudFormation stack sets up a dummy HTTP API which stores all requests in SQS for inspection

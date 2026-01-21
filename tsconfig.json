@@ -16,7 +16,8 @@
     "noUnusedLocals": true,
     "noEmit": true,
     "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["./src/**/*", "./cdk/**/*", "./e2e.spec.ts"]
 }
