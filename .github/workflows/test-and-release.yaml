@@ -55,7 +55,9 @@ jobs:
         run: node ./cli.ts > http-api-mock.json
 
       - name: End-to-end tests
-        run: npx tsx --test e2e.spec.ts
+        env:
+          NODE_ARGS: "--no-warnings --experimental-transform-types"
+        run: node --test e2e.spec.ts
 
       - name: Destroy
         env:

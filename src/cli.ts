@@ -21,7 +21,7 @@ process.on('unhandledRejection', die)
 
 const cdkApp = () => [
 	'--app',
-	`"npx tsx --no-warnings ${path.join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'cdk', 'http-api-mock.ts')}"`,
+	`"node --experimental-strip-types --no-warnings --no-warnings ${path.join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'cdk', 'http-api-mock.ts')}"`,
 ]
 
 export const cli = async (): Promise<void> => {

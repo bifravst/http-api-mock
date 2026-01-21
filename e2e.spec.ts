@@ -3,8 +3,8 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { describe, it } from 'node:test'
-import { listRequests } from './src/requests.js'
-import { registerResponse } from './src/responses.js'
+import { listRequests } from './src/requests.ts'
+import { registerResponse } from './src/responses.ts'
 
 const { responsesTableName, apiURL, requestsTableName } = JSON.parse(
 	await readFile(path.join(process.cwd(), 'http-api-mock.json'), 'utf-8'),
