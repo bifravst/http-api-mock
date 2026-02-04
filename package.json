@@ -93,7 +93,7 @@
     "@types/aws-lambda": "8.10.160",
     "@types/command-line-args": "5.2.3",
     "@types/node": "25.1.0",
-    "@typescript/native-preview": "7.0.0-dev.20260131.1",
+    "@typescript/native-preview": "7.0.0-dev.20260201.1",
     "command-line-args": "6.0.1",
     "commitlint": "20.4.0",
     "husky": "9.1.7"
