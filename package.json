@@ -92,7 +92,7 @@
     "@commitlint/config-conventional": "20.5.0",
     "@types/aws-lambda": "8.10.161",
     "@types/command-line-args": "5.2.3",
-    "@types/node": "25.5.0",
+    "@types/node": "25.6.0",
     "@typescript/native-preview": "7.0.0-dev.20260309.1",
     "command-line-args": "6.0.2",
     "commitlint": "20.5.0",
