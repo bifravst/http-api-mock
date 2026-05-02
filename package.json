@@ -86,7 +86,7 @@
     "tsx": "4.21.0"
   },
   "devDependencies": {
-    "@aws-cdk/toolkit-lib": "1.24.0",
+    "@aws-cdk/toolkit-lib": "1.25.0",
     "@bifravst/eslint-config-typescript": "6.4.4",
     "@bifravst/prettier-config": "1.1.17",
     "@commitlint/config-conventional": "20.5.0",
