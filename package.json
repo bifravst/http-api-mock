@@ -83,7 +83,7 @@
     "aws-cdk-lib": "2.257.0",
     "cdk": "2.1124.1",
     "chalk": "5.6.2",
-    "tsx": "4.21.0"
+    "tsx": "4.22.3"
   },
   "devDependencies": {
     "@aws-cdk/toolkit-lib": "1.26.2",
