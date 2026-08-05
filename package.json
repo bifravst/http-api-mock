@@ -12,7 +12,7 @@
   },
   "type": "module",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
     "prepublishOnly": "node --experimental-strip-types ./.npm/compile.ts && npx tsgo src/*.ts --emitDeclarationOnly --declaration --ignoreConfig --allowImportingTsExtensions --target esnext --module nodenext --moduleResolution nodenext --outDir ./npm && mv npm/src/* npm",
     "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
@@ -42,7 +42,7 @@
   },
   "engines": {
     "node": ">=24",
-    "npm": ">=11"
+    "npm": ">=12.0.2 <13"
   },
   "release": {
     "branches": [
@@ -94,6 +94,7 @@
     "@types/command-line-args": "5.2.3",
     "@types/node": "25.9.5",
     "@typescript/native-preview": "7.0.0-dev.20260309.1",
+    "check-node-version": "4.2.1",
     "command-line-args": "6.0.2",
     "commitlint": "20.5.3",
     "husky": "9.1.7"
