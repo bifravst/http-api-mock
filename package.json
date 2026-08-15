@@ -77,6 +77,7 @@
     "@aws-sdk/client-cloudformation": "3.1111.0",
     "@aws-sdk/client-dynamodb": "3.1111.0",
     "@aws-sdk/client-sts": "3.1111.0",
+    "@aws-cdk/toolkit-lib": "1.38.2",
     "@aws-sdk/util-dynamodb": "3.996.9",
     "@bifravst/aws-cdk-lambda-helpers": "4.0.96",
     "@bifravst/cloudformation-helpers": "9.1.1",
@@ -84,10 +85,10 @@
     "@bifravst/run": "1.2.0",
     "aws-cdk-lib": "2.265.0",
     "cdk": "2.1136.0",
-    "chalk": "6.0.0"
+    "chalk": "6.0.0",
+    "command-line-args": "6.0.2"
   },
   "devDependencies": {
-    "@aws-cdk/toolkit-lib": "1.38.2",
     "@bifravst/eslint-config-typescript": "7.0.34",
     "@bifravst/prettier-config": "1.1.17",
     "@commitlint/config-conventional": "21.2.2",
@@ -96,7 +97,6 @@
     "@types/node": "26.2.0",
     "@typescript/native": "npm:typescript@7.0.2",
     "check-node-version": "4.2.1",
-    "command-line-args": "6.0.2",
     "commitlint": "21.2.2",
     "husky": "9.1.7",
     "lint-staged": "17.3.0",
