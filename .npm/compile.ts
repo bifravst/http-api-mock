@@ -19,7 +19,7 @@ try {
 	// pass
 }
 
-for await (const file of glob(`./.npm/../src/**/*.ts`)) {
+for await (const file of glob(`./.npm/../{src,cdk}/**/*.ts`)) {
 	if (file.endsWith('.spec.ts')) continue
 	let compiled = (
 		await swc.transformFile(file, {
