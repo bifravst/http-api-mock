@@ -10,7 +10,6 @@
       }
     }
   },
-  "bin": "./npm/cdk/http-api-mock.js",
   "type": "module",
   "scripts": {
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
