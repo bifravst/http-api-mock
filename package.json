@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
-    "prepublishOnly": "node --no-warnings --experimental-transform-types  ./.npm/compile.ts",
+    "prepublishOnly": "node --no-warnings --experimental-transform-types  ./.npm/compile.ts && cp -rv cdk/* npm/cdk",
     "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
   "repository": {
