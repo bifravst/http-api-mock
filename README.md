@@ -16,7 +16,7 @@ Provides a mock HTTP API for testing third-party API integrations.
 Create a new mock API:
 
 ```bash
-npx @bifravst/http-api-mock
+node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js
 
 {
   "stackName": "http-api-mock-69c2c4b9",
@@ -29,13 +29,13 @@ npx @bifravst/http-api-mock
 ## Describe a mock HTTP API
 
 ```bash
-npx @bifravst/http-api-mock describe <stackName>
+node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js describe <stackName>
 ```
 
 ## Delete a mock HTTP API
 
 ```bash
-npx @bifravst/http-api-mock destroy <stackName>
+node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js destroy <stackName>
 ```
 
 ## Node & NPM
