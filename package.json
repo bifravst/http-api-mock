@@ -72,10 +72,10 @@
   ],
   "prettier": "@bifravst/prettier-config",
   "dependencies": {
+    "@aws-cdk/toolkit-lib": "1.38.2",
     "@aws-sdk/client-cloudformation": "3.1111.0",
     "@aws-sdk/client-dynamodb": "3.1111.0",
     "@aws-sdk/client-sts": "3.1111.0",
-    "@aws-cdk/toolkit-lib": "1.38.2",
     "@aws-sdk/util-dynamodb": "3.996.9",
     "@bifravst/aws-cdk-lambda-helpers": "5.0.4",
     "@bifravst/cloudformation-helpers": "10.0.1",

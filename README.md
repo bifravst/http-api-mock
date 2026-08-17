@@ -29,13 +29,13 @@ node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js
 ## Describe a mock HTTP API
 
 ```bash
-node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js describe <stackName>
+node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js --describe --stack-name <stackName>
 ```
 
 ## Delete a mock HTTP API
 
 ```bash
-node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js destroy <stackName>
+node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js --destroy --stack-name <stackName>
 ```
 
 ## Node & NPM

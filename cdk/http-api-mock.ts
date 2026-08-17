@@ -14,19 +14,6 @@ import { randomString } from '../src/randomString.ts'
 import { HTTPAPIMockApp } from './App.ts'
 import type { StackOutputs } from './Stack.ts'
 
-const options = commandLineArgs([
-	{
-		name: 'config',
-		type: Boolean,
-		defaultValue: false,
-	},
-	{
-		name: 'destroy',
-		type: Boolean,
-		defaultValue: false,
-	},
-])
-
 const loadConfig = async (): Promise<
 	Partial<StackOutputs & { stackName: string }>
 > => {
@@ -43,19 +30,35 @@ const loadConfig = async (): Promise<
 	}
 }
 
-const stackName =
-	process.env.HTTP_API_MOCK_STACK_NAME ??
-	(await loadConfig())?.stackName ??
-	`http-api-mock-${randomString()}`
+const options = commandLineArgs([
+	{
+		name: 'config',
+		type: Boolean,
+		defaultValue: false,
+	},
+	{
+		name: 'destroy',
+		type: Boolean,
+		defaultValue: false,
+	},
+	{
+		name: 'stack-name',
+		type: String,
+		defaultValue:
+			process.env.HTTP_API_MOCK_STACK_NAME ??
+			(await loadConfig())?.stackName ??
+			`http-api-mock-${randomString()}`,
+	},
+])
 
 const saveConfig = async () => {
 	writeFileSync(
 		path.join(process.cwd(), 'http-api-mock.json'),
 		JSON.stringify(
 			{
-				stackName,
+				stackName: options['stack-name'],
 				...(await stackOutput(new CloudFormationClient({}))<StackOutputs>(
-					stackName,
+					options['stack-name'],
 				)),
 			},
 			null,
@@ -80,7 +83,7 @@ const dependencies: Array<keyof (typeof pJSON)['dependencies']> = [
 	'@bifravst/from-env',
 ]
 
-const app = new HTTPAPIMockApp(stackName, {
+const app = new HTTPAPIMockApp(options['stack-name'], {
 	lambdaSources: {
 		httpApiMock: await packLambdaFromPath({
 			id: 'httpApiMock',
