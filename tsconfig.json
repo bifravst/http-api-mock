@@ -19,8 +19,10 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
-    "types": ["node"]
+    "types": ["node"],
+    "rootDir": ".",
+    "outDir": "./dist"
   },
   "include": ["./src/**/*", "./cdk/**/*", "./e2e.spec.ts"],
-  "exclude": ["./npm/**/*"]
+  "exclude": ["./dist/**/*"]
 }

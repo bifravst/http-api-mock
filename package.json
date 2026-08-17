@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
-    "prepublishOnly": "npx tsc --noEmit false --outDir ./npm -d && cp -rv cdk/* npm/cdk && cp package.json npm/package.json",
+    "prepublishOnly": "npx tsc --noEmit false -d",
     "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
   "repository": {
@@ -66,9 +66,7 @@
     "access": "public"
   },
   "files": [
-    "npm",
-    "cdk",
-    "src",
+    "dist",
     "LICENSE",
     "README.md"
   ],

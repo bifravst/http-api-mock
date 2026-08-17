@@ -1,6 +1,5 @@
 node_modules/
 npm-debug.log
 dist/
-npm/
 cdk.out/
 http-api-mock.json

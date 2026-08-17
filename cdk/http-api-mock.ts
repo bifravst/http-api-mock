@@ -84,7 +84,7 @@ const app = new HTTPAPIMockApp(stackName, {
 	lambdaSources: {
 		httpApiMock: await packLambdaFromPath({
 			id: 'httpApiMock',
-			sourceFilePath: 'cdk/resources/http-api-mock-lambda.ts',
+			sourceFilePath: 'cdk/resources/http-api-mock-lambda.js',
 			baseDir,
 			distDir: lambdasDir,
 		}),

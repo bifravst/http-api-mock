@@ -52,10 +52,13 @@ jobs:
           # vars.AWS_REGION_CI is an organization variable
           aws-region: ${{ vars.AWS_REGION_CI }}
 
+      - name: Compile source
+        run: npm run prepublishOnly
+
       - name: Deploy
         env:
           NODE_ARGS: "--no-warnings --experimental-transform-types"
-        run: node ./cdk/http-api-mock.ts
+        run: node ./dist/cdk/http-api-mock.js
 
       - name: End-to-end tests
         env:
@@ -65,7 +68,7 @@ jobs:
       - name: Destroy
         env:
           NODE_ARGS: "--no-warnings --experimental-transform-types"
-        run: node ./cdk/http-api-mock.ts --destroy
+        run: node ./dist/cdk/http-api-mock.js --destroy
 
       - name: Semantic release
         run: npx semantic-release
