@@ -82,7 +82,7 @@
     "@bifravst/aws-cdk-lambda-helpers": "5.0.4",
     "@bifravst/cloudformation-helpers": "10.0.1",
     "@bifravst/from-env": "4.0.0",
-    "@bifravst/run": "2.0.0",
+    "@bifravst/run": "2.0.1",
     "aws-cdk-lib": "2.265.0",
     "cdk": "2.1136.0",
     "chalk": "6.0.0",
