@@ -5,8 +5,8 @@
   "exports": {
     "./*": {
       "import": {
-        "default": "./npm/src/*.js",
-        "types": "./npm/src/*.d.ts"
+        "default": "./dist/src/*.js",
+        "types": "./dist/src/*.d.ts"
       }
     }
   },
