@@ -18,8 +18,9 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
     "types": ["node"]
   },
-  "include": ["./src/**/*", "./cdk/**/*", "./e2e.spec.ts", "./.npm/*.ts"],
+  "include": ["./src/**/*", "./cdk/**/*", "./e2e.spec.ts"],
   "exclude": ["./npm/**/*"]
 }
