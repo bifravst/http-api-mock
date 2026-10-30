@@ -14,7 +14,7 @@
   "scripts": {
     "prepare": "husky && case \"$npm_command\" in install|ci) check-node-version --package ;; esac",
     "prepublishOnly": "npx tsc --noEmit false -d",
-    "test": "node --no-warnings --experimental-transform-types --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
+    "test": "node --no-warnings --test \"!(node_modules|e2e-tests|integration-tests)/**/*.spec.ts\""
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     ]
   },
   "engines": {
-    "node": ">=24.19.0 <25",
+    "node": ">=24.22.1 <25 || >=26.12.1 <27",
     "npm": ">=12.0.2 <13"
   },
   "release": {
