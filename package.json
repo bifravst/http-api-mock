@@ -73,9 +73,9 @@
   "prettier": "@bifravst/prettier-config",
   "dependencies": {
     "@aws-cdk/toolkit-lib": "1.43.0",
-    "@aws-sdk/client-cloudformation": "3.1156.0",
-    "@aws-sdk/client-dynamodb": "3.1156.0",
-    "@aws-sdk/client-sts": "3.1156.0",
+    "@aws-sdk/client-cloudformation": "3.1157.0",
+    "@aws-sdk/client-dynamodb": "3.1157.0",
+    "@aws-sdk/client-sts": "3.1157.0",
     "@aws-sdk/util-dynamodb": "3.996.9",
     "@bifravst/aws-cdk-lambda-helpers": "5.1.5",
     "@bifravst/cloudformation-helpers": "10.0.1",
@@ -87,7 +87,7 @@
     "command-line-args": "6.0.2"
   },
   "devDependencies": {
-    "@bifravst/eslint-config-typescript": "8.0.14",
+    "@bifravst/eslint-config-typescript": "8.0.15",
     "@bifravst/prettier-config": "2.0.4",
     "@commitlint/config-conventional": "21.2.4",
     "@types/aws-lambda": "8.10.164",
