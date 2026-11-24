@@ -40,8 +40,8 @@ node node_modules/@bifravst/http-api-mock/dist/cdk/http-api-mock.js --destroy --
 
 ## Node & NPM
 
-This project requires Node.js `>=24.22.1 <25` or `>=26.12.1 <27` and npm
-`>=12.0.2 <13` (enforced via `check-node-version` on `npm install` and
+This project requires Node.js `>=24.22.1 <25` or `>=26.13.1 <27` and npm
+`>=12.2.3 <13` (enforced via `check-node-version` on `npm install` and
 `npm ci`).
 
 The check is skipped during `npm publish` and `npm pack`, because
